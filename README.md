@@ -5,15 +5,17 @@ To include this eslint-file to your project just create a .eslint file in your p
 
 1. Install the npm module
 
-      npm install git+ssh://git@github.com:incloud/eslint-config-incloud.git
+```shell
+npm install eslint-config-incloud
+```
 
 
 2. Extend your .eslintrc
-
-        {
-            "extends": "eslint-config-incloud"
-        }
-
+```json
+{
+    "extends": "eslint-config-incloud"
+}
+```
 
 ## Development
 
@@ -21,8 +23,10 @@ Explanation of rules you may want to override you can find [here](http://eslint.
 
 To override a rule
 
-    {
-        "rules": {
-            "quotes": ["error", "double"] // "rulename": ["servity", "setting"]
-        }
+```json
+{
+    "rules": {
+        "quotes": ["error", "double"] // "rulename": ["servity", "setting"]
     }
+}
+```
