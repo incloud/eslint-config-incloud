@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-incloud",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Inclouds eslint config",
   "main": "index.js",
   "scripts": {
