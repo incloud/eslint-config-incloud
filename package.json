@@ -1,0 +1,29 @@
+{
+  "name": "eslint-config-incloud",
+  "version": "1.0.0",
+  "description": "Inclouds eslint config",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Phew...no time for tests yet :)\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:incloud/eslint-config-incloud.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "incloud",
+    "styleguide"
+  ],
+  "author": "Patrick Rath",
+  "license": "MIT",
+  "dependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.16.1",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0"
+  }
+}
