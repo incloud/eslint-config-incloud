@@ -1,10 +1,16 @@
 {
   "name": "eslint-config-incloud",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Inclouds eslint config",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**",
+    ".prettierrc"
+  ],
   "scripts": {
-    "test": "echo \"Phew...no time for tests yet :)\" && exit 1"
+    "build": "tsc",
+    "lint": "npm run build && eslint ."
   },
   "repository": {
     "type": "git",
@@ -16,14 +22,22 @@
     "incloud",
     "styleguide"
   ],
-  "author": "Patrick Rath",
+  "author": "Incloud Engineering GmbH",
   "license": "MIT",
   "dependencies": {
-    "babel-eslint": "^7.1.1",
-    "eslint": "^3.16.1",
-    "eslint-config-airbnb": "^14.1.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.10.0"
+    "@types/eslint": "^7.28.2"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "eslint": "^8.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.1"
+  },
+  "devDependencies": {
+    "@tsconfig/node14": "^1.0.1",
+    "@types/node": "^14",
+    "typescript": "^4.4.4"
   }
 }
