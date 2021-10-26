@@ -1,6 +1,6 @@
 module.exports = {
-  extends: ['./dist/index.js'],
-  ignorePatterns: ['/dist'],
+  extends: ['./index'],
+  ignorePatterns: ['*.js', '*.d.ts'],
   env: {
     node: true,
   },

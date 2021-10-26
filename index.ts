@@ -30,11 +30,10 @@ const config: Linter.Config = {
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
-      parserOptions: {
-        project: '../tsconfig.json',
-        tsconfigRootDir: __dirname,
-      },
       extends: ['plugin:@typescript-eslint/recommended-requiring-type-checking'],
+      parserOptions: {
+        project: 'tsconfig.json',
+      },
     },
   ],
 };
