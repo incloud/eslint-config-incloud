@@ -36,3 +36,4 @@
         extends: ['incloud/react'],
       };
       ```
+      You probably want to run eslint with `--max-warnings 0` as many of the [react-app rules we depend on are only warnings](https://github.com/facebook/create-react-app/blob/v4.0.3/packages/eslint-config-react-app/index.js#L13), which is not desirable when checking against them in CI.
