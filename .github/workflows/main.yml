@@ -2,6 +2,8 @@ name: ci
 
 on:
   push:
+    branches:
+      - '**'
   release:
     types:
       - created
@@ -17,7 +19,8 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: npm ci
       - run: npm run lint
-      - run: npm publish --dry-run
+      - if: ${{ github.event_name != 'release' }}
+        run: npm publish --dry-run
       - if: ${{ github.event_name == 'release' }}
         run: npm publish
         env:
