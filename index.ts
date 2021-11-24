@@ -23,6 +23,7 @@ const config: Linter.Config = {
         },
       },
     ],
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-unused-vars': ['error', { varsIgnorePattern: '^_' }],
     'arrow-body-style': ['error', 'as-needed'],
     'import/no-default-export': 'error',

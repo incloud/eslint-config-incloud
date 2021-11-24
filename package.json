@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-incloud",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "INCLOUD Standard ESLint Config",
   "main": "index.js",
   "types": "index.d.ts",
