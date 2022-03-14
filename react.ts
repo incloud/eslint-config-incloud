@@ -340,6 +340,61 @@ const config: Linter.Config = {
     // Verify the list of the dependencies for Hooks like useEffect and similar
     // https://github.com/facebook/react/blob/1204c789776cb01fbaf3e9f032e7e2ba85a44137/packages/eslint-plugin-react-hooks/src/ExhaustiveDeps.js
     'react-hooks/exhaustive-deps': 'error',
+
+    // Enforce that anchors have content
+    // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-has-content.md
+    'jsx-a11y/anchor-has-content': ['error', { components: [] }],
+
+    // ensure <a> tags are valid
+    // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/0745af376cdc8686d85a361ce36952b1fb1ccf6e/docs/rules/anchor-is-valid.md
+    'jsx-a11y/anchor-is-valid': [
+      'error',
+      {
+        components: ['Link'],
+        specialLink: ['to'],
+        aspects: ['noHref', 'invalidHref', 'preferButton'],
+      },
+    ],
+
+    // Enforce that a control (an interactive element) has a text label.
+    // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/control-has-associated-label.md
+    'jsx-a11y/control-has-associated-label': [
+      'error',
+      {
+        labelAttributes: ['label'],
+        controlComponents: [],
+        ignoreElements: [
+          'audio',
+          'canvas',
+          'embed',
+          'input',
+          'textarea',
+          'tr',
+          'video',
+        ],
+        ignoreRoles: [
+          'grid',
+          'listbox',
+          'menu',
+          'menubar',
+          'radiogroup',
+          'row',
+          'tablist',
+          'toolbar',
+          'tree',
+          'treegrid',
+        ],
+        depth: 5,
+      },
+    ],
+
+    // ensure iframe elements have a unique title
+    // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/iframe-has-title.md
+    'jsx-a11y/iframe-has-title': 'error',
+
+    // Prevent img alt text from containing redundant words like "image", "picture", or "photo"
+    // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/img-redundant-alt.md
+    'jsx-a11y/img-redundant-alt': 'error',
   },
 };
 
