@@ -14,7 +14,11 @@ const config: Linter.Config = {
     'react/forbid-prop-types': [
       'error',
       {
-        forbid: ['any', 'array', 'object'],
+        forbid: [
+          'any',
+          'array',
+          'object',
+        ],
         checkContextTypes: true,
         checkChildContextTypes: true,
       },
@@ -22,7 +26,11 @@ const config: Linter.Config = {
 
     // Enforce boolean attributes notation in JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md
-    'react/jsx-boolean-value': ['error', 'never', { always: [] }],
+    'react/jsx-boolean-value': [
+      'error',
+      'never',
+      { always: [] },
+    ],
 
     // Validate closing bracket location in JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md
@@ -34,7 +42,11 @@ const config: Linter.Config = {
 
     // Enforce or disallow spaces inside of curly braces in JSX attributes
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md
-    'react/jsx-curly-spacing': ['error', 'never', { allowMultiline: true }],
+    'react/jsx-curly-spacing': [
+      'error',
+      'never',
+      { allowMultiline: true },
+    ],
 
     // Enforce event handler naming conventions in JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-handler-names.md
@@ -52,10 +64,7 @@ const config: Linter.Config = {
 
     // Limit maximum of props on a single line in JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md
-    'react/jsx-max-props-per-line': [
-      'error',
-      { maximum: 1, when: 'multiline' },
-    ],
+    'react/jsx-max-props-per-line': ['error', { maximum: 1, when: 'multiline' }],
 
     // Prevent duplicate props in JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md
@@ -221,10 +230,7 @@ const config: Linter.Config = {
 
     // Enforce curly braces or disallow unnecessary curly braces in JSX props and/or children
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-brace-presence.md
-    'react/jsx-curly-brace-presence': [
-      'error',
-      { props: 'never', children: 'never' },
-    ],
+    'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never' }],
 
     // One JSX Element Per Line
     // https://github.com/yannickcr/eslint-plugin-react/blob/843d71a432baf0f01f598d7cf1eea75ad6896e4b/docs/rules/jsx-one-expression-per-line.md
@@ -331,7 +337,7 @@ const config: Linter.Config = {
 
     // Prevents unused propTypes
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-prop-types.md
-    'react/no-unused-prop-types': 'error',
+    'react/no-unused-prop-types': ['error', { varsIgnorePattern: '^_' }],
 
     // Enforce Rules of Hooks
     // https://github.com/facebook/react/blob/c11015ff4f610ac2924d1fc6d569a17657a404fd/packages/eslint-plugin-react-hooks/src/RulesOfHooks.js
@@ -352,7 +358,11 @@ const config: Linter.Config = {
       {
         components: ['Link'],
         specialLink: ['to'],
-        aspects: ['noHref', 'invalidHref', 'preferButton'],
+        aspects: [
+          'noHref',
+          'invalidHref',
+          'preferButton',
+        ],
       },
     ],
 
