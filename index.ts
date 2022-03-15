@@ -26,6 +26,22 @@ const config: Linter.Config = {
           match: true,
         },
       },
+      {
+        selector: 'variable',
+        format: [
+          'camelCase',
+          'PascalCase',
+          'UPPER_CASE',
+        ],
+      },
+      {
+        selector: 'function',
+        format: ['camelCase', 'PascalCase'],
+      },
+      {
+        selector: 'typeLike',
+        format: ['PascalCase'],
+      },
     ],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-unused-vars': ['error', { varsIgnorePattern: '^_' }],
